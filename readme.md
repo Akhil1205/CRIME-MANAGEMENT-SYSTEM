@@ -130,8 +130,12 @@ set des="yes";
 END IF;
 END $$
 DELIMITER ;
+
+
 `
 The `catogery` procedure classify the Crime based on crime id given.
+
+
 
 `
 DELIMITER $$
@@ -165,17 +169,3 @@ DELIMITER ;
 `
 
 
-`
-DELIMITER $$
-CREATE PROCEDURE category(IN id int,OUT cat varchar(20))
-BEGIN
-DECLARE c1 varchar(10);
-select crime_type INTO c1 from crime where crime_id=id;
-if c1="MURDER" then
-set cat="CBI";
-else
-set cat="police";
-END IF;
-END $$
-DELIMITER ;
-`
