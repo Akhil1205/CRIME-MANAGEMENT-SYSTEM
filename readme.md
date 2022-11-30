@@ -131,6 +131,22 @@ END IF;
 END $$
 DELIMITER ;
 `
+The `catogery` procedure classify the Crime based on crime id given.
+
+`
+DELIMITER $$
+CREATE PROCEDURE catogery(IN id int,OUT cat varchar(20))
+BEGIN
+DECLARE c1 varchar(10);
+select crime_type INTO c1 from crime where crime_id=id;
+if c1="MURDER" then
+set cat="CBI";
+else
+set cat="police";
+END IF;
+END $$
+DELIMITER ;
+`
 
 Function `find_delay_fir` gives the delay between crime_date and date_of_fir (like 30 days..15 days...)
 
@@ -148,3 +164,18 @@ END$
 DELIMITER ;
 `
 
+
+`
+DELIMITER $$
+CREATE PROCEDURE category(IN id int,OUT cat varchar(20))
+BEGIN
+DECLARE c1 varchar(10);
+select crime_type INTO c1 from crime where crime_id=id;
+if c1="MURDER" then
+set cat="CBI";
+else
+set cat="police";
+END IF;
+END $$
+DELIMITER ;
+`
