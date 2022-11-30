@@ -35,9 +35,11 @@ XAMPP AND STREAMLIT HAS TO BE INSTALLED
 
 APACHE ND MYSQL SHOULD BE RUNNING BEFORE IMPLEMENTATION
 
+First a database `crime_db` has to be created 
+
 Code to start the Application
 
-`streamlit run app.py`
+`streamlit run app.py` or `streamlit run path(app.py)`
 
 `app.py` is the home page
 
