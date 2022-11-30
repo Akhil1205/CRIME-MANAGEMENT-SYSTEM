@@ -133,7 +133,7 @@ END $$
 DELIMITER ;
 `
 
-`
+
 The `catogery` procedure classify the Crime based on crime id given.
 
 
